@@ -103,6 +103,11 @@ body {
     transition: .3s;
 }
 
+a.btn {
+    text-decoration: none;
+    color: inherit;
+}
+
 .btn i {
     color: #ff4d6d;
 }
@@ -489,6 +494,10 @@ header {
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0 0 15px rgba(255, 80, 120, 0.4);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .btn-home1:hover {
@@ -626,6 +635,9 @@ hr {
 
 .project-card img {
     width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: top center;
     border-radius: 14px;
     margin-bottom: 15px;
     border: 1px solid rgba(255, 80, 120, 0.25);
@@ -643,7 +655,8 @@ hr {
     margin-bottom: 15px;
 }
 
-.project-card .skills a {
+.project-card .skills a,
+.project-card .skills span {
     display: inline-block;
     margin: 4px 6px 0 0;
     padding: 6px 12px;
@@ -817,6 +830,18 @@ hr {
     gap: 2.5rem;
 }
 
+.services-grid-two {
+    max-width: 960px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+    .services-grid-two {
+        grid-template-columns: 1fr;
+    }
+}
+
 .service-card {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 80, 120, 0.25);
@@ -980,9 +1005,21 @@ hr {
   color: #d0d0d0;
 }
 
-.contact-item svg {
+.contact-item svg,
+.contact-item > i {
   color: #ff4d6d;
   filter: drop-shadow(0 0 6px rgba(255, 80, 120, 0.6));
+  width: 20px;
+  text-align: center;
+}
+
+.contact-item a {
+  color: #ffb3c6;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #ff4d6d;
 }
 
 .social-links {
